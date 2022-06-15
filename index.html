@@ -69,7 +69,9 @@ for (const input of inputs) {
 input.onclick = (layer) => {
 const layerId = layer.target.id;
 map.setStyle('mapbox://styles/mapbox/' + layerId);
-
+if(layerId == "cjaudgl840gn32rnrepcb9b9g")
+{
+map.on('load', () => {
 map.addSource('dem', {
 'type': 'raster-dem',
 'url': 'mapbox://mapbox.mapbox-terrain-dem-v1'
@@ -84,6 +86,8 @@ map.addLayer(
 },
 'waterway-river-canal-shadow'
 );
+});}
+
 
 };
 }
