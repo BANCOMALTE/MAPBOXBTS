@@ -45,18 +45,15 @@ font-family: 'Open Sans', sans-serif;
 <label for="streets-v11">streets</label>
 <input id="outdoors-v11" type="radio" name="rtoggle" value="outdoors">
 <label for="outdoors-v11">outdoors</label>
-<input id="hills" type="radio" name="rtoggle" value="hills">
-<label for="hills">outdoors</label>
 </div>
   
 
   <!-- Insert Javascript (.js) code to create the map -->
 <script>
-	var hills = 'mapbox://styles/mapbox/cjaudgl840gn32rnrepcb9b9g'
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYmFuY29tYWx0ZSIsImEiOiJja3Fub3I1dDUwYmg3MnVueHVzcmhqdDBkIn0.HEt44zGrExgF_tODahgsHg';
 const map = new mapboxgl.Map({
 container: 'map',
-style: hills, // the outdoors-v10 style but without Hillshade layers
+style: 'mapbox://styles/mapbox/cjaudgl840gn32rnrepcb9b9g', // the outdoors-v10 style but without Hillshade layers
 center: [15, 42],
 zoom: 6
 });
