@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MAPPA BTS TRACKER</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+ 
+  
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+
+ 
+  <style>
+    body { margin:0; padding:0; }
+    #map { position: absolute; top:0; bottom:0; right:0; left:0; }
+  </style>
+
+</head>
+<body>
+
+  <!-- Insert HTML division tag to layout the map -->
+  <div id="map"></div>
+  
+
+  <!-- Insert Javascript (.js) code to create the map -->
+  <script>
+
+  
+
+// Add layers that we need to the map
+
+	   
+
+
+// Initialize the map
+
+	mapboxgl.accessToken = 'pk.eyJ1IjoiYmFuY29tYWx0ZSIsImEiOiJja3Fub3I1dDUwYmg3MnVueHVzcmhqdDBkIn0.HEt44zGrExgF_tODahgsHg';
+var map = new mapboxgl.Map({
+container: 'map', // container ID
+style: 'mapbox://styles/mapbox/outdoors-v11', // style URL
+center: [15, 42], // starting position [lng, lat]
+zoom: 9 // starting zoom
+});
+
+
+   
+
+
+  
+
+
+  
+	  
+	  
+  </script>
+</body>
+</html>
