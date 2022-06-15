@@ -69,7 +69,9 @@ for (const input of inputs) {
 input.onclick = (layer) => {
 const layerId = layer.target.id;
 map.setStyle('mapbox://styles/mapbox/' + layerId);
+	console.log(layerId);
 if(layerId == "cjaudgl840gn32rnrepcb9b9g")
+	
 {
 map.on('load', () => {
 map.addSource('dem', {
