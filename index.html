@@ -73,7 +73,7 @@ map.setStyle('mapbox://styles/mapbox/' + layerId);
 if(layerId == "cjaudgl840gn32rnrepcb9b9g")
 	
 {
-map.on('load', () => {
+map.on('loaded', () => {
 map.addSource('dem', {
 'type': 'raster-dem',
 'url': 'mapbox://mapbox.mapbox-terrain-dem-v1'
