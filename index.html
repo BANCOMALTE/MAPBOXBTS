@@ -33,7 +33,9 @@ font-family: 'Open Sans', sans-serif;
   <!-- Insert HTML division tag to layout the map -->
   <div id="map"></div>
 	<div id="menu">
-<input id="satellite-v9" type="radio" name="rtoggle" value="satellite" checked="checked">
+		<input id="outdoors-v10" type="radio" name="rtoggle" value="outdoors" checked="checked">
+<label for="outdoors-v10">outdoors</label>
+<input id="satellite-v9" type="radio" name="rtoggle" value="satellite" >
 <!-- See a list of Mapbox-hosted public styles at -->
 <!-- https://docs.mapbox.com/api/maps/styles/#mapbox-styles -->
 <label for="satellite-v9">satellite</label>
@@ -53,7 +55,7 @@ font-family: 'Open Sans', sans-serif;
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYmFuY29tYWx0ZSIsImEiOiJja3Fub3I1dDUwYmg3MnVueHVzcmhqdDBkIn0.HEt44zGrExgF_tODahgsHg';
 const map = new mapboxgl.Map({
 container: 'map',
-style: 'mapbox://styles/mapbox/cjaudgl840gn32rnrepcb9b9g', // the outdoors-v10 style but without Hillshade layers
+style: 'mapbox://styles/mapbox/outdoors-v10', // the outdoors-v10 style but without Hillshade layers
 center: [15, 42],
 zoom: 6
 });
