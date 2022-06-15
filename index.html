@@ -49,7 +49,7 @@ font-family: 'Open Sans', sans-serif;
 <input id="outdoors-v11" type="radio" name="rtoggle" value="outdoors">
 <label for="outdoors-v11">outdoors</label>
 <input id="cjaudgl840gn32rnrepcb9b9g" type="radio" name="rtoggle" value="hills" checked="checked">
-<label for="cjaudgl840gn32rnrepcb9b9g">outdoors</label>
+<label for="cjaudgl840gn32rnrepcb9b9g">hills</label>
 </div>
   
 
@@ -69,6 +69,22 @@ for (const input of inputs) {
 input.onclick = (layer) => {
 const layerId = layer.target.id;
 map.setStyle('mapbox://styles/mapbox/' + layerId);
+map.on('load', () => {
+map.addSource('dem', {
+'type': 'raster-dem',
+'url': 'mapbox://mapbox.mapbox-terrain-dem-v1'
+});
+map.addLayer(
+{
+'id': 'hillshading',
+'source': 'dem',
+'type': 'hillshade'
+// insert below waterway-river-canal-shadow;
+// where hillshading sits in the Mapbox Outdoors style
+},
+'waterway-river-canal-shadow'
+);
+});
 };
 }
 
