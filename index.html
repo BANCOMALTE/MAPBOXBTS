@@ -41,6 +41,9 @@ accessToken: mapboxgl.accessToken,
 mapboxgl: mapboxgl
 })
 );
+	// Add zoom and rotation controls to the map.
+map.addControl(new mapboxgl.NavigationControl());
+	
 map.on('load', () => {
 map.addSource('dem', {
 'type': 'raster-dem',
